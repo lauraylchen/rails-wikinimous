@@ -1,0 +1,11 @@
+<h1><%= @article.title %></h1>
+<h2><%= link_to '✎', edit_article_path(@article) %></h2>
+<h2>
+  <%= link_to '🗑',
+    article_path(@article),
+    method: :delete,
+    data: { confirm: "Are you sure?" }
+  %>
+</h2>
+
+<p><%= @article.content %></p>
